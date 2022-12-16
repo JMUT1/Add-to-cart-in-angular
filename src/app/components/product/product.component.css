@@ -21,6 +21,6 @@
 }
 
 .item a:hover {
-  color: red;
+  color: blue;
   cursor: pointer;
 }
