@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CartServiceService } from 'src/app/services/cart-service.service';
+import { ApiInfo } from 'src/shared/api-interface';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
+  public products: ApiInfo[] = []
+  public granTotal !: number
 
-  constructor() { }
+  constructor(private cartService: CartServiceService) { }
 
   ngOnInit(): void {
+    this.cartService.getProducts()
+    .subscribe(res =>{
+      this.products = res;
+      this.granTotal = this.cartService.getTotalPrice()
+    })
   }
 
 }

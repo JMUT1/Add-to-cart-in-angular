@@ -6,4 +6,6 @@ export interface ApiInfo {
   title: string,
   rating: object,
   image: string,
+  quantity: number,
+  total: number
 }

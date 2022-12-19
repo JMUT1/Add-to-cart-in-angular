@@ -29,11 +29,12 @@ public productList = new BehaviorSubject<any>([])
 
   }
 
-  getTotalPrice(){
+  getTotalPrice(): number{
     let granTotal = 0
     this.cartItemList.map((a:any)=>{
       granTotal+= a.total
     })
+    return granTotal
   }
 
   removeCartItem(product: any){
