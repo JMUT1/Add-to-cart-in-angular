@@ -7,13 +7,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProductComponent } from './components/product/product.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductCardComponent } from './components/product/product-card/product-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     CartComponent,
-    ProductComponent
+    ProductComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,

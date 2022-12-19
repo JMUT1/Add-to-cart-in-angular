@@ -26,3 +26,21 @@
     </div>
   </div>
 </div>
+
+<div class="container">
+  <div class="row">
+    <ng-container *ngFor="let item of productList">
+      <div class="card col-md-3">
+        <img src="" alt="" />
+        <h5>{{ item.title }}</h5>
+        <p></p>
+        <p></p>
+        <button class="btn btn-primary">Add Cart</button>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<!-- <app-product-card
+  *ngFor="let item of productList"
+  [cardDetail]="item"
+></app-product-card> -->

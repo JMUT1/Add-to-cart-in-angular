@@ -10,10 +10,11 @@ export class ApiserviceService {
 
   constructor(private http: HttpClient) { }
 
+  ApiUrl = "https://fakestoreapi.com/products"
 
 
   getProduct(){
-    return this.http.get<ApiInfo[]>("https://fakestoreapi.com/products")
+    return this.http.get<ApiInfo[]>(this.ApiUrl)
     .pipe(map((res:ApiInfo[])=>{
       return res
     }) )
