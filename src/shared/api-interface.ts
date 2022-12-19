@@ -4,5 +4,6 @@ export interface ApiInfo {
   id: number,
   price: number,
   title: string,
-  rating: object
+  rating: object,
+  image: string,
 }
