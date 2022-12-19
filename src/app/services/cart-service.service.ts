@@ -43,6 +43,7 @@ public productList = new BehaviorSubject<any>([])
         this.cartItemList.splice(index, 1)
       }
     })
+    this.productList.next(this.cartItemList);
   }
   removeAllCart(){
     this.cartItemList = []
